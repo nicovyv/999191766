@@ -6,6 +6,14 @@ header{
 main{
     background-color: #EAD196;
 }
+.sectionForm{
+    background-color:#F3EDC8 ;
+}
+.bordeS3{
+    border-color: #7D0A0A !important;
+}
+
+
 footer{
     background-color: #7D0A0A;
 }
