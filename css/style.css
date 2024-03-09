@@ -1,10 +1,32 @@
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}/* header*/
 header{
     background-color: #7D0A0A;
+
 }
 
+.texto-header{
+    color: #F3EDC8;
+}
+
+
+/* main*/
 main{
     background-color: #EAD196;
+}
+
+.imgCrr{
+    height: 300px;
+}
+
+.carousel-inner{
+    height: 250px;
+}
+.carousel-item{
+    height: 250px;
 }
 .sectionForm{
     background-color:#F3EDC8 ;
@@ -13,6 +35,18 @@ main{
     border-color: #7D0A0A !important;
 }
 
+h5{
+    text-shadow: 2px 2px black;
+}
+
+.btn-modal{
+    background-color: white;
+    color: black;
+
+}
+
+
+/*footer*/
 
 footer{
     background-color: #7D0A0A;
