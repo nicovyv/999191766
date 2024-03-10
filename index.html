@@ -5,32 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-  <header>
+  <header class="fixed">
     <nav class="navbar conteiner navbar-expand-lg ">
       <div class="row w-100 h-75">
 
-        <div class="d-flex col-9 ps-4 gap-4">
-          <img src="./assets/logo.png" alt="cinta cinematografica" class="logo h-50">
-          <h4 class="texto-header fs-5">FESTIVAL NOXE EN VELA</h4>
+        <div class="d-flex col-9 ps-4 gap-4 col-lg-4">
+          <!-- <img src="./assets/logo.png" alt="cinta cinematografica" class="logo h-50"> -->
+          <h4 class="texto-header fs-5 navbar-brand fst-italic ms-5">FESTIVAL NOXE EN VELA</h4>
         </div>
 
-        <button class="navbar-toggler col-2 h-50 d-flex ms-4" type="button" data-bs-toggle="collapse"
+        <button class="navbar-toggler col-2 h-50 d-flex ms-4 d-lg-none" type="button" data-bs-toggle="collapse"
           data-bs-target="#menuDesplegable" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-around" id="menuDesplegable">
-          <ul>
-            <li>Novedades</li>
-            <li>Cartelera</li>
-            <li>Comprar Tickets</li>
-            <li>Contacto</li>
+        <div class="collapse navbar-collapse justify-content-around col-lg-4 justify-content-lg-end gx-lg-4" id="menuDesplegable">
+          <ul class="d-flex flex-row justify-content-around pt-3 ">
+            <li class="fw-semibold"><a href="#festival">El Festival</a></li>
+            <li class="fw-semibold"><a href="#titulos">Títulos</a></li>
+            <li class="fw-semibold"><a href="#butacas">Comprar Butacas</a></li>
+            <li class="fw-semibold"><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
 
@@ -41,7 +42,7 @@
     </nav>
   </header>
   <main>
-    <section class="container pb-5">
+    <section class="container pb-5 crr d-lg-none">
       <div id="carousel" class="carousel slide h100" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -80,10 +81,13 @@
       </div>
 
     </section>
-    <section class="container d-flex justify-content-center align-items-center pb-5 texto-main w-100 flex-column py-3">
-      <h1>FESTIVAL NOXE EN VELA</h1>
-      <img src="./assets/cine-main.jpg" alt="" class="object-fit-scale w-100 py-2">
-      <p class="text-center w-75 fs-4 pt-3">Durante tres días consecutivos del mes de junio, el Teatro Arcadia se
+
+    <section id="festival"
+      class="container d-flex justify-content-center align-items-center pb-5 texto-main w-100 flex-column py-3">
+      <h1 class="fst-italic">FESTIVAL NOXE EN VELA</h1>
+      <img src="./assets/cine-main.jpg" alt="" class="object-fit-scale w-100 py-2 d-lg-none">
+      <p class="text-center w-75 fs-4 pt-3 fst-italic p-main">Durante tres días consecutivos del mes de junio, el Teatro
+        Arcadia se
         transforma en el epicentro del Festival
         de Cine Noxe en Vela, un evento anual que celebra la diversidad y la creatividad en la pantalla grande. Con una
         selección de ocho películas innovadoras, el festival ofrece una experiencia cinematográfica única que abarca una
@@ -92,378 +96,422 @@
         sin límites. </p>
     </section>
 
-    <section class="container d-flex flex-column justify-content-center align-items-center">
+    <section class="container-fluid d-flex flex-column justify-content-center align-items-center" id="titulos">
 
-      <h2 class="text-center fs-1">TITULOS</h2>
-      <!--card1-->
-      <div class="card my-3 justify-content-center" style="width: 18rem;">
-        <img src="./assets/after-life.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-title">After Life</h4>
-        </div>
-        <button type="button" class="btn btn-primary btn-modal fw-semibold" data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop">
-          Sinopsis
-        </button>
+      <h2 class="text-center fs-1 fst-italic">TITULOS</h2>
 
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class="modal-title fs-5" id="staticBackdropLabel">After Life</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      <div class="row justify-content-sm-between gx-sm-3">
+        <!--card1-->
+        <div class="d-flex flex-column justify-content-center align-items-center col-sm-6 col-md-6 col-xl-3 ">
+
+          <div class="card my-3 justify-content-center" style="width: 18rem;">
+            <img src="./assets/after-life.jpg" class="card-img-top card-img object-fit-cover" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">After Life</h4>
+            </div>
+            <button type="button" class="btn btn-primary btn-modal fw-semibold" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop">
+              Sinopsis
+            </button>
+
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+              aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="staticBackdropLabel">After Life</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    A mitad de camino entre el Cielo y la Tierra, los que acaban de morir son recibidos por
+                    unos guías que les ayudan a examinar sus recuerdos con el fin de rememorar un momento decisivo de
+                    sus
+                    vidas.
+                    Cada uno de los muertos debe escoger un único recuerdo para que sea plasmado en una película y poder
+                    así
+                    llevarlo con ellos cuando vayan al Cielo
+                  </div>
+
+                </div>
               </div>
-              <div class="modal-body">
-                A mitad de camino entre el Cielo y la Tierra, los que acaban de morir son recibidos por
-                unos guías que les ayudan a examinar sus recuerdos con el fin de rememorar un momento decisivo de sus
-                vidas.
-                Cada uno de los muertos debe escoger un único recuerdo para que sea plasmado en una película y poder así
-                llevarlo con ellos cuando vayan al Cielo
-              </div>
-
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex">País:<p class="fw-semibold ms-2">Japón</p>
+              </li>
+              <li class="list-group-item d-flex">Año:<p class="fw-semibold ms-2">1998</p>
+              </li>
+              <li class="list-group-item d-flex">Duración:<p class="fw-semibold ms-2">118 min.</p>
+              </li>
+              <li class="list-group-item d-flex">Dirección:<p class="fw-semibold ms-2">Hirokazu Koreeda</p>
+              </li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Asientos</a>
             </div>
           </div>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-flex">País:<p class="fw-semibold ms-2">Japón</p>
-          </li>
-          <li class="list-group-item d-flex">Año:<p class="fw-semibold ms-2">1998</p>
-          </li>
-          <li class="list-group-item d-flex">Duración:<p class="fw-semibold ms-2">118 min.</p>
-          </li>
-          <li class="list-group-item d-flex">Dirección:<p class="fw-semibold ms-2">Hirokazu Koreeda</p>
-          </li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Asientos</a>
-        </div>
-      </div>
-      <!--card2-->
-      <div class="card my-3 justify-content-center" style="width: 18rem;">
-        <img src="./assets/beach-bum.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-title">The Beach Bum</h4>
-        </div>
-        <button type="button" class="btn btn-primary btn-modal fw-semibold" data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop2">
-          Sinopsis
-        </button>
+        <!--card2-->
+        <div class="d-flex flex-column justify-content-center align-items-center col-sm-6 col-md-6 col-xl-3">
 
-        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class="modal-title fs-5" id="staticBackdropLabel">The Beach Bum</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="card my-3 justify-content-center" style="width: 18rem;">
+            <img src="./assets/beach-bum.jpg" class="card-img-top card-img object-fit-cover" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">The Beach Bum</h4>
+            </div>
+            <button type="button" class="btn btn-primary btn-modal fw-semibold" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop2">
+              Sinopsis
+            </button>
+
+            <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false"
+              tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="staticBackdropLabel">The Beach Bum</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Moondog es un escritor de poesía que ha hecho un parón en su carrera para vivir a lo grande en los
+                    Cayos
+                    de Florida. En el momento que debe volver a Miami para la boda de su hija Heather, todo cambiará.
+                    Por un
+                    lado, su esposa Minnie, debido a lo abandonada que se siente, mantiene un romance con Lingerie, un
+                    rapero (Snoop Dogg) amigo del matrimonio. Por el otro está su agente, Lewis, que no para de
+                    presionar
+                    para que publique otro libro. Será en la noche de la ceremonia cuando todo de un giro inesperado.
+                    Tras
+                    un accidente de coche, Minnie fallece, y Moondog tendrá que respetar su última voluntad. Ella ha
+                    dejado
+                    una claúsula en su testamento en la que solicita que su marido lleve a cabo la publicación de una
+                    novela
+                    para que pueda disfrutar de su herencia. De esta manera, y visto que ha quedado sin todos los
+                    privilegios que tenía, se propondrá terminar esta tarea.
+
+                  </div>
+
+                </div>
               </div>
-              <div class="modal-body">
-                Moondog es un escritor de poesía que ha hecho un parón en su carrera para vivir a lo grande en los Cayos
-                de Florida. En el momento que debe volver a Miami para la boda de su hija Heather, todo cambiará. Por un
-                lado, su esposa Minnie, debido a lo abandonada que se siente, mantiene un romance con Lingerie, un
-                rapero (Snoop Dogg) amigo del matrimonio. Por el otro está su agente, Lewis, que no para de presionar
-                para que publique otro libro. Será en la noche de la ceremonia cuando todo de un giro inesperado. Tras
-                un accidente de coche, Minnie fallece, y Moondog tendrá que respetar su última voluntad. Ella ha dejado
-                una claúsula en su testamento en la que solicita que su marido lleve a cabo la publicación de una novela
-                para que pueda disfrutar de su herencia. De esta manera, y visto que ha quedado sin todos los
-                privilegios que tenía, se propondrá terminar esta tarea.
-
-              </div>
-
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex">País:<p class="fw-semibold ms-2">Estados Unidos</p>
+              </li>
+              <li class="list-group-item d-flex">Año:<p class="fw-semibold ms-2">2019</p>
+              </li>
+              <li class="list-group-item d-flex">Duración:<p class="fw-semibold ms-2">95 min.</p>
+              </li>
+              <li class="list-group-item d-flex">Dirección:<p class="fw-semibold ms-2">Harmony Korine</p>
+              </li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Asientos</a>
             </div>
           </div>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-flex">País:<p class="fw-semibold ms-2">Estados Unidos</p>
-          </li>
-          <li class="list-group-item d-flex">Año:<p class="fw-semibold ms-2">2019</p>
-          </li>
-          <li class="list-group-item d-flex">Duración:<p class="fw-semibold ms-2">95 min.</p>
-          </li>
-          <li class="list-group-item d-flex">Dirección:<p class="fw-semibold ms-2">Harmony Korine</p>
-          </li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Asientos</a>
-        </div>
-      </div>
-      <!--card3-->
+        <!--card3-->
+        <div class="d-flex flex-column justify-content-center align-items-center col-sm-6 col-md-6 col-xl-3">
+          <div class="card my-3 justify-content-center" style="width: 18rem;">
+            <img src="./assets/fanny-and-alexander.jpg" class="card-img-top card-img object-fit-cover" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Fanny and Alexander</h4>
+            </div>
+            <button type="button" class="btn btn-primary btn-modal fw-semibold" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop3">
+              Sinopsis
+            </button>
 
-      <div class="card my-3 justify-content-center" style="width: 18rem;">
-        <img src="./assets/fanny-and-alexander.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-title">Fanny and Alexander</h4>
-        </div>
-        <button type="button" class="btn btn-primary btn-modal fw-semibold" data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop3">
-          Sinopsis
-        </button>
+            <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false"
+              tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="staticBackdropLabel">Fanny and Alexander</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Durante las navidades de 1907, en la localidad sueca de Uppsala, Oscar Ekdahl, integrante de una
+                    numerosa familia liberal dedicada al teatro, enferma y fallece poco tiempo después, dejando una
+                    viuda,
+                    Emilie, y dos hijos, Fanny y Alexander. El responsable de oficiar el funeral es el obispo
+                    protestante
+                    Edvard Vergerus. El pastor presta consuelo a la joven viuda. Tras frecuentarla durante un tiempo, le
+                    propone matrimonio. Emilie acepta y se muda a casa del obispo junto a sus hijos, tras contraer
+                    matrimonio. El nuevo hogar resulta terriblemente inhóspito para los niños. Acostumbrados a la
+                    bonhomía y
+                    relajación de su familia paterna, Fanny y Alexander descubren la severidad y el trato adusto de
+                    Vergerus, su madre, su hermana y su criada. El niño se rebela contra el padrastro y recibe por ello
+                    un
+                    cruel castigo.
+                  </div>
 
-        <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class="modal-title fs-5" id="staticBackdropLabel">Fanny and Alexander</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
               </div>
-              <div class="modal-body">
-                Durante las navidades de 1907, en la localidad sueca de Uppsala, Oscar Ekdahl, integrante de una
-                numerosa familia liberal dedicada al teatro, enferma y fallece poco tiempo después, dejando una viuda,
-                Emilie, y dos hijos, Fanny y Alexander. El responsable de oficiar el funeral es el obispo protestante
-                Edvard Vergerus. El pastor presta consuelo a la joven viuda. Tras frecuentarla durante un tiempo, le
-                propone matrimonio. Emilie acepta y se muda a casa del obispo junto a sus hijos, tras contraer
-                matrimonio. El nuevo hogar resulta terriblemente inhóspito para los niños. Acostumbrados a la bonhomía y
-                relajación de su familia paterna, Fanny y Alexander descubren la severidad y el trato adusto de
-                Vergerus, su madre, su hermana y su criada. El niño se rebela contra el padrastro y recibe por ello un
-                cruel castigo.
-              </div>
-
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex">País:<p class="fw-semibold ms-2">Suecia</p>
+              </li>
+              <li class="list-group-item d-flex">Año:<p class="fw-semibold ms-2">1982</p>
+              </li>
+              <li class="list-group-item d-flex">Duración:<p class="fw-semibold ms-2">197 min.</p>
+              </li>
+              <li class="list-group-item d-flex">Dirección:<p class="fw-semibold ms-2">Ingmar Bergman</p>
+              </li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Asientos</a>
             </div>
           </div>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-flex">País:<p class="fw-semibold ms-2">Suecia</p>
-          </li>
-          <li class="list-group-item d-flex">Año:<p class="fw-semibold ms-2">1982</p>
-          </li>
-          <li class="list-group-item d-flex">Duración:<p class="fw-semibold ms-2">197 min.</p>
-          </li>
-          <li class="list-group-item d-flex">Dirección:<p class="fw-semibold ms-2">Ingmar Bergman</p>
-          </li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Asientos</a>
-        </div>
-      </div>
-      <!--card4-->
+        <!--card4-->
+        <div class="d-flex flex-column justify-content-center align-items-center col-sm-6 col-md-6 col-xl-3">
+          <div class="card my-3 justify-content-center" style="width: 18rem;">
+            <img src="./assets/hiron3.jpg" class="card-img-top card-img object-fit-cover" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">3-Iron</h4>
+            </div>
+            <button type="button" class="btn btn-primary btn-modal fw-semibold" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop4">
+              Sinopsis
+            </button>
 
-      <div class="card my-3 justify-content-center" style="width: 18rem;">
-        <img src="./assets/hiron3.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-title">3-Iron</h4>
-        </div>
-        <button type="button" class="btn btn-primary btn-modal fw-semibold" data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop4">
-          Sinopsis
-        </button>
+            <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false"
+              tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="staticBackdropLabel">3-Iron</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Tae-suk es un joven que ocupa temporalmente viviendas cuyos habitantes están ausentes. Nunca roba ni
+                    ocasiona daños en los hogares de sus involuntarios anfitriones. En realidad, es una especie de
+                    fantasma
+                    que duerme en camas ajenas, come algo de las neveras de esos extraños y retribuye su forzada
+                    hospitalidad haciendo la colada o arreglando alguna que otra avería doméstica. Sun-hwa, que en
+                    tiempos
+                    fue una hermosa modelo, se ha visto convertida en una sombra viviente por un marido que la maltrata,
+                    encerrándola en una casa ostentosa. El destino cruza los caminos de Tae-suk y Sun-hwa, aunque sus
+                    existencias están abocadas a no dejar huella en el mundo. Se conocen cuando Tae-suk entre en casa de
+                    Sun-hwa, y enseguida saben que son almas gemelas. Como si estuvieran unidos por vínculos invisibles,
+                    descubren que no pueden separarse y aceptan en silencio su nuevo y extraño destino.
+                  </div>
 
-        <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class="modal-title fs-5" id="staticBackdropLabel">3-Iron</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
               </div>
-              <div class="modal-body">
-                Tae-suk es un joven que ocupa temporalmente viviendas cuyos habitantes están ausentes. Nunca roba ni
-                ocasiona daños en los hogares de sus involuntarios anfitriones. En realidad, es una especie de fantasma
-                que duerme en camas ajenas, come algo de las neveras de esos extraños y retribuye su forzada
-                hospitalidad haciendo la colada o arreglando alguna que otra avería doméstica. Sun-hwa, que en tiempos
-                fue una hermosa modelo, se ha visto convertida en una sombra viviente por un marido que la maltrata,
-                encerrándola en una casa ostentosa. El destino cruza los caminos de Tae-suk y Sun-hwa, aunque sus
-                existencias están abocadas a no dejar huella en el mundo. Se conocen cuando Tae-suk entre en casa de
-                Sun-hwa, y enseguida saben que son almas gemelas. Como si estuvieran unidos por vínculos invisibles,
-                descubren que no pueden separarse y aceptan en silencio su nuevo y extraño destino.
-              </div>
-
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex">País:<p class="fw-semibold ms-2">Corea del Sur</p>
+              </li>
+              <li class="list-group-item d-flex">Año:<p class="fw-semibold ms-2">2004</p>
+              </li>
+              <li class="list-group-item d-flex">Duración:<p class="fw-semibold ms-2">95 min.</p>
+              </li>
+              <li class="list-group-item d-flex">Dirección:<p class="fw-semibold ms-2">Kim Ki-duk</p>
+              </li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Asientos</a>
             </div>
           </div>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-flex">País:<p class="fw-semibold ms-2">Corea del Sur</p>
-          </li>
-          <li class="list-group-item d-flex">Año:<p class="fw-semibold ms-2">2004</p>
-          </li>
-          <li class="list-group-item d-flex">Duración:<p class="fw-semibold ms-2">95 min.</p>
-          </li>
-          <li class="list-group-item d-flex">Dirección:<p class="fw-semibold ms-2">Kim Ki-duk</p>
-          </li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Asientos</a>
-        </div>
-      </div>
+        <!--card5-->
+        <div class="d-flex flex-column justify-content-center align-items-center col-sm-6 col-md-6 col-xl-3">
+          <div class="card my-3 justify-content-center" style="width: 18rem;">
+            <img src="./assets/into-the-inferno.jpg" class="card-img-top card-img object-fit-cover" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Into the Inferno</h4>
+            </div>
+            <button type="button" class="btn btn-primary btn-modal fw-semibold" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop5">
+              Sinopsis
+            </button>
 
-      <!--card5-->
-      <div class="card my-3 justify-content-center" style="width: 18rem;">
-        <img src="./assets/into-the-inferno.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-title">Into the Inferno</h4>
-        </div>
-        <button type="button" class="btn btn-primary btn-modal fw-semibold" data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop5">
-          Sinopsis
-        </button>
+            <div class="modal fade" id="staticBackdrop5" data-bs-backdrop="static" data-bs-keyboard="false"
+              tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="staticBackdropLabel">Into the Inferno</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    El aclamado director Werner Herzog visita varios volcanes activos alrededor del mundo. Herzog y el
+                    especialista en volcanes Clive Oppenheimer emprenden una aventura por todo el mundo explorando
+                    algunos
+                    de los volcanes más conocidos de Indonesia, Etiopía, Islandia y Corea del Norte. Relacionándose con
+                    científicos e indígenas de cada zona, buscan entender la compleja y antigua conexión que existe
+                    entre
+                    los seres humanos y una de las grandes maravillas de la naturaleza.
+                  </div>
 
-        <div class="modal fade" id="staticBackdrop5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class="modal-title fs-5" id="staticBackdropLabel">Into the Inferno</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
               </div>
-              <div class="modal-body">
-                El aclamado director Werner Herzog visita varios volcanes activos alrededor del mundo. Herzog y el
-                especialista en volcanes Clive Oppenheimer emprenden una aventura por todo el mundo explorando algunos
-                de los volcanes más conocidos de Indonesia, Etiopía, Islandia y Corea del Norte. Relacionándose con
-                científicos e indígenas de cada zona, buscan entender la compleja y antigua conexión que existe entre
-                los seres humanos y una de las grandes maravillas de la naturaleza.
-              </div>
-
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex">País:<p class="fw-semibold ms-2">Reino Unido</p>
+              </li>
+              <li class="list-group-item d-flex">Año:<p class="fw-semibold ms-2">2016</p>
+              </li>
+              <li class="list-group-item d-flex">Duración:<p class="fw-semibold ms-2">104 min.</p>
+              </li>
+              <li class="list-group-item d-flex">Dirección:<p class="fw-semibold ms-2">Werner Herzog</p>
+              </li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Asientos</a>
             </div>
           </div>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-flex">País:<p class="fw-semibold ms-2">Reino Unido</p>
-          </li>
-          <li class="list-group-item d-flex">Año:<p class="fw-semibold ms-2">2016</p>
-          </li>
-          <li class="list-group-item d-flex">Duración:<p class="fw-semibold ms-2">104 min.</p>
-          </li>
-          <li class="list-group-item d-flex">Dirección:<p class="fw-semibold ms-2">Werner Herzog</p>
-          </li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Asientos</a>
-        </div>
-      </div>
-      <!--card6-->
-      <div class="card my-3 justify-content-center" style="width: 18rem;">
-        <img src="./assets/lesson-of-the-evil.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-title">Lesson of the Evil</h4>
-        </div>
-        <button type="button" class="btn btn-primary btn-modal fw-semibold" data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop6">
-          Sinopsis
-        </button>
+        <!--card6-->
+        <div class="d-flex flex-column justify-content-center align-items-center col-sm-6 col-md-6 col-xl-3">
+          <div class="card my-3 justify-content-center" style="width: 18rem;">
+            <img src="./assets/lesson-of-the-evil.jpg" class="card-img-top card-img object-fit-cover" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Lesson of the Evil</h4>
+            </div>
+            <button type="button" class="btn btn-primary btn-modal fw-semibold" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop6">
+              Sinopsis
+            </button>
 
-        <div class="modal fade" id="staticBackdrop6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class="modal-title fs-5" id="staticBackdropLabel">Lesson of the Evil</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                Nos narra la historia de Hasumi Seiji, un profesor muy querido por sus alumnos y de plena confianza para
-                sus compañeros, que en realidad es un psicópata, nació sin la
-                capacidad de empatizar con los demás. Aun así todo va bien, en su vida personal y profesional, intenta
-                pasar desapercibido y vivir una vida mas o menos normal, hasta que empieza a ser intimidado, a tener
-                diversos problemas en el trabajo, en el instituto, determinando que la único forma para resolverlos es a
-                asesinar a sus alumnos uno por uno.
-              </div>
+            <div class="modal fade" id="staticBackdrop6" data-bs-backdrop="static" data-bs-keyboard="false"
+              tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="staticBackdropLabel">Lesson of the Evil</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Nos narra la historia de Hasumi Seiji, un profesor muy querido por sus alumnos y de plena confianza
+                    para
+                    sus compañeros, que en realidad es un psicópata, nació sin la
+                    capacidad de empatizar con los demás. Aun así todo va bien, en su vida personal y profesional,
+                    intenta
+                    pasar desapercibido y vivir una vida mas o menos normal, hasta que empieza a ser intimidado, a tener
+                    diversos problemas en el trabajo, en el instituto, determinando que la único forma para resolverlos
+                    es a
+                    asesinar a sus alumnos uno por uno.
+                  </div>
 
+                </div>
+              </div>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex">País:<p class="fw-semibold ms-2">Japón</p>
+              </li>
+              <li class="list-group-item d-flex">Año:<p class="fw-semibold ms-2">2012</p>
+              </li>
+              <li class="list-group-item d-flex">Duración:<p class="fw-semibold ms-2">129 min.</p>
+              </li>
+              <li class="list-group-item d-flex">Dirección:<p class="fw-semibold ms-2">Takashi Miike</p>
+              </li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Asientos</a>
             </div>
           </div>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-flex">País:<p class="fw-semibold ms-2">Japón</p>
-          </li>
-          <li class="list-group-item d-flex">Año:<p class="fw-semibold ms-2">2012</p>
-          </li>
-          <li class="list-group-item d-flex">Duración:<p class="fw-semibold ms-2">129 min.</p>
-          </li>
-          <li class="list-group-item d-flex">Dirección:<p class="fw-semibold ms-2">Takashi Miike</p>
-          </li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Asientos</a>
-        </div>
-      </div>
-      <!--card7-->
-      <div class="card my-3 justify-content-center" style="width: 18rem;">
-        <img src="./assets/night-on-earth.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-title">Night on Earth</h4>
-        </div>
-        <button type="button" class="btn btn-primary btn-modal fw-semibold" data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop7">
-          Sinopsis
-        </button>
+        <!--card7-->
+        <div class="d-flex flex-column justify-content-center align-items-center col-sm-6 col-md-6 col-xl-3">
+          <div class="card my-3 justify-content-center" style="width: 18rem;">
+            <img src="./assets/night-on-earth.jpg" class="card-img-top card-img object-fit-cover" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Night on Earth</h4>
+            </div>
+            <button type="button" class="btn btn-primary btn-modal fw-semibold" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop7">
+              Sinopsis
+            </button>
 
-        <div class="modal fade" id="staticBackdrop7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class="modal-title fs-5" id="staticBackdropLabel">Night on Earth</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                Película dividida en historias independientes a través de las cuales Jim Jarmusch presenta el panorama
-                nocturno de cinco grandes ciudades (Los Angeles, Nueva York, París, Roma y Helsinki), con un taxi, y lo
-                que en él ocurre desde el anochecer hasta el amanecer de un mismo día, y obviamente con diferentes
-                personajes, como hilo conductor.
-              </div>
+            <div class="modal fade" id="staticBackdrop7" data-bs-backdrop="static" data-bs-keyboard="false"
+              tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="staticBackdropLabel">Night on Earth</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Película dividida en historias independientes a través de las cuales Jim Jarmusch presenta el
+                    panorama
+                    nocturno de cinco grandes ciudades (Los Angeles, Nueva York, París, Roma y Helsinki), con un taxi, y
+                    lo
+                    que en él ocurre desde el anochecer hasta el amanecer de un mismo día, y obviamente con diferentes
+                    personajes, como hilo conductor.
+                  </div>
 
+                </div>
+              </div>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex">País:<p class="fw-semibold ms-2">Estados Unidos</p>
+              </li>
+              <li class="list-group-item d-flex">Año:<p class="fw-semibold ms-2">1991</p>
+              </li>
+              <li class="list-group-item d-flex">Duración:<p class="fw-semibold ms-2">128 min.</p>
+              </li>
+              <li class="list-group-item d-flex">Dirección:<p class="fw-semibold ms-2">Jim Jarmusch</p>
+              </li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Asientos</a>
             </div>
           </div>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-flex">País:<p class="fw-semibold ms-2">Estados Unidos</p>
-          </li>
-          <li class="list-group-item d-flex">Año:<p class="fw-semibold ms-2">1991</p>
-          </li>
-          <li class="list-group-item d-flex">Duración:<p class="fw-semibold ms-2">128 min.</p>
-          </li>
-          <li class="list-group-item d-flex">Dirección:<p class="fw-semibold ms-2">Jim Jarmusch</p>
-          </li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Asientos</a>
-        </div>
-      </div>
-      <!--card8-->
-      <div class="card my-3 justify-content-center" style="width: 18rem;">
-        <img src="./assets/seventh-continent.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-title">The Seventh Continent</h4>
-        </div>
-        <button type="button" class="btn btn-primary btn-modal fw-semibold" data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop8">
-          Sinopsis
-        </button>
+        <!--card8-->
+        <div class="d-flex flex-column justify-content-center align-items-center col-sm-6 col-md-6 col-xl-3">
+          <div class="card my-3 justify-content-center" style="width: 18rem;">
+            <img src="./assets/seventh-continent.jpg" class="card-img-top card-img object-fit-cover" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">The Seventh Continent</h4>
+            </div>
+            <button type="button" class="btn btn-primary btn-modal fw-semibold" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop8">
+              Sinopsis
+            </button>
 
-        <div class="modal fade" id="staticBackdrop8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class="modal-title fs-5" id="staticBackdropLabel">The Seventh Continent</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                Basada en hechos reales. Una familia burguesa decide desprenderse de todos sus bienes y vivir según una
-                concepción espiritual del mundo, que llevarán hasta las últimas consecuencias...
-              </div>
+            <div class="modal fade" id="staticBackdrop8" data-bs-backdrop="static" data-bs-keyboard="false"
+              tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="staticBackdropLabel">The Seventh Continent</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Basada en hechos reales. Una familia burguesa decide desprenderse de todos sus bienes y vivir según
+                    una
+                    concepción espiritual del mundo, que llevarán hasta las últimas consecuencias...
+                  </div>
 
+                </div>
+              </div>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex">País:<p class="fw-semibold ms-2">Austria</p>
+              </li>
+              <li class="list-group-item d-flex">Año:<p class="fw-semibold ms-2">1989</p>
+              </li>
+              <li class="list-group-item d-flex">Duración:<p class="fw-semibold ms-2">104 min.</p>
+              </li>
+              <li class="list-group-item d-flex">Dirección:<p class="fw-semibold ms-2">Michael Haneke</p>
+              </li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Asientos</a>
             </div>
           </div>
+
+
+
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-flex">País:<p class="fw-semibold ms-2">Austria</p>
-          </li>
-          <li class="list-group-item d-flex">Año:<p class="fw-semibold ms-2">1989</p>
-          </li>
-          <li class="list-group-item d-flex">Duración:<p class="fw-semibold ms-2">104 min.</p>
-          </li>
-          <li class="list-group-item d-flex">Dirección:<p class="fw-semibold ms-2">Michael Haneke</p>
-          </li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Asientos</a>
-        </div>
-      </div>
-      <!--fin de las cards-->
+        <!--fin de las cards-->
     </section>
 
-    <section class="container mt-5  pb-5 d-flex justify-content-center">
+    <section class="container mt-5  pb-5 d-flex flex-column justify-content-center align-items-center" id="butacas">
+      <h2 class="fst-italic"> COMPRAR BUTACAS</h2>
       <form class="p-3 sectionForm w-75 d-flex-column border border-3 bordeS3">
         <label for="pelicula">Seleccione Película</label>
         <select name="pelicula" id="pelicula" class="form-select">
@@ -488,24 +536,25 @@
     </section>
 
   </main>
-  <footer class="container-fluid">
+  <footer class="container-fluid " id="contacto">
 
-    <section class="row justify-content-end">
+    <section class="row h-100 justify-content-end">
 
-      <div class="col-3 me-4">
-        <img src="./assets/logo.png" alt="cinta cinematografica" class="logoF">
+      <div class="col-3 me-4 d-flex flex-column justify-content-center border">
+        <h4 class="fs-5 pt-2 fst-italic">FESTIVAL <br>NOXE EN VELA</h4>
+        <!-- <img src="./assets/logo.png" alt="cinta cinematografica" class="logoF"> -->
       </div>
 
       <div class="d-flex col-8 flex-row justify-content-end">
 
-        <div class="d-flex flex-column w-50 text-end">
+        <div class="d-flex flex-column w-50 text-end justify-content-around">
           <a href="./index.html" class="aF">Home</a>
           <a href="" class="aF">Contacto</a>
-          <a href="" class="aF">Quiénes Somos</a>
+          <a href="#festival" class="aF">Quiénes Somos</a>
           <a href="" class="aF">Legales</a>
         </div>
 
-        <div class="d-flex flex-column w-50 p-2 text-end">
+        <div class="d-flex flex-column w-50 p-2 text-end justify-content-around">
           <a href="" class="aF">Facebook</a>
           <a href="" class="aF">Instagram</a>
           <a href="" class="aF">Youtube</a>

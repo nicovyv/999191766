@@ -11,8 +11,13 @@ header{
 .texto-header{
     color: #F3EDC8;
 }
-
-
+header nav div ul{
+    list-style-type: none;
+}
+header nav div ul li a{
+    text-decoration: none;
+    color: #F3EDC8;
+}
 /* main*/
 main{
     background-color: #EAD196;
@@ -44,12 +49,16 @@ h5{
     color: black;
 
 }
+.card-img{
+    height: 356px;
+}
 
 
 /*footer*/
 
 footer{
     background-color: #7D0A0A;
+    height: 150px;
 }
 .logo{
     width: 60px;
@@ -59,4 +68,30 @@ footer{
 }
 .aF{
     color: #F3EDC8;
+    text-decoration: none;
+}
+
+
+@media(min-width: 992px){
+    .crr{
+        height: 500px;
+        padding-top: 15vh;
+        
+    }
+
+    .carousel-inner{
+        height: 350px;
+    }
+    main{
+        background-image: url(../assets/cine-main.jpg);
+    }
+    h1{
+        color: #F3EDC8;
+    }
+    h2{
+        color: #F3EDC8;
+    }
+    .p-main{
+        color: #F3EDC8;
+    }
 }
