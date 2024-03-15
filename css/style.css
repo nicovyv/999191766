@@ -24,6 +24,9 @@ header nav div ul li a {
     color: #F3EDC8;
 }
 
+.navbar-toggler{ 
+    Background-color:#EAD196 ;
+  }
 
 main {
     background-color: #EAD196;
